@@ -18,20 +18,20 @@ public class duaOperasi {
     public static void main(String[] args) {
 
         String operator;
-        double inputSatu;
-        double inputDua;
+        int inputSatu;
+        int inputDua;
 
         Scanner scanner = new Scanner(System.in);
         do {
 
             System.out.println("Masukkan Angka Pertama Kemudian Tekan <Enter>");
 
-            while (!scanner.hasNextDouble()) {
+            while (!scanner.hasNextInt()) {
                 System.out.println("Please, enter double");
                 scanner.next();
 
             }
-            inputSatu = scanner.nextDouble();
+            inputSatu = scanner.nextInt();
 
             System.out.println("Masukkan Operator (+, -, *, /) lalu Tekan <Enter>");
 
@@ -41,6 +41,14 @@ public class duaOperasi {
                 System.out.println("Silahkan Masukkan Operator (+, -, *, /)");
                 operator = scanner.next();
             }
+            System.out.println("Masukkan Angka Kedua Kemudian Tekan <Enter>");
+
+            while (! scanner.hasNextInt() ) {
+                System.out.println("Please, enter double");
+                scanner.next();
+
+            }
+            inputDua = scanner.nextInt();
         }
     }
 }
