@@ -74,9 +74,12 @@ public class duaOperasi {
             }
 
             System.out.println("tekan <y> untuk melanjutkan");
-        
-
         }
+        while (scanner.next().equals("y"));
+
+        scanner.close();
+
+        System.exit(0);
     }
 }
 
