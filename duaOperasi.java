@@ -43,12 +43,39 @@ public class duaOperasi {
             }
             System.out.println("Masukkan Angka Kedua Kemudian Tekan <Enter>");
 
-            while (! scanner.hasNextInt() ) {
+            while (!scanner.hasNextInt()) {
                 System.out.println("Please, enter double");
                 scanner.next();
 
             }
             inputDua = scanner.nextInt();
+
+            switch (operator) {
+                case "+" -> {
+                    System.out.print("hasil = ");
+                    System.out.println(inputSatu + inputDua);
+                }
+                case "-" -> {
+                    System.out.print("hasil =");
+                    System.out.println(inputSatu - inputDua);
+                }
+                case "*" -> {
+                    System.out.print("hasil =");
+                    System.out.println(inputSatu * inputDua);
+                }
+                case "/" -> {
+                    System.out.print("hasil =");
+                    if (inputDua == 0) {
+                        System.out.println("ukuran tak terbatas");
+                    } else {
+                        System.out.println(inputSatu / inputDua);
+                    }
+                }
+            }
+
+            System.out.println("tekan <y> untuk melanjutkan");
+        
+
         }
     }
 }
